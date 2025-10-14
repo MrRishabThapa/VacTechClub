@@ -22,7 +22,7 @@ export default function LightboxModal({
     };
     window.addEventListener("keydown", onKey);
     const original = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
+    document.body.style.overflow = "scroll";
     return () => {
       window.removeEventListener("keydown", onKey);
       document.body.style.overflow = original;

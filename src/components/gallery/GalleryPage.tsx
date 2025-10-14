@@ -60,17 +60,17 @@ export default function GalleryPage(): React.ReactElement {
       {/* Header */}
       <div className="shrink-0 px-4 sm:px-5 pt-8">
         <div className="max-w-7xl w-full mx-auto flex flex-col items-center gap-3">
-          <h2 className="text-5xl sm:text-6xl font-bold text-[#9cc9ff] text-center">
+          <h2 className="text-5xl sm:text-6xlgit font-bold text-[#9cc9ff] text-center">
             Gallery
           </h2>
           <p className="text-gray-400 text-center max-w-3xl">
-            Share event highlights and moments. Limited by Memo Tokens for a
-            curated gallery.
+            Share our Tech and events memories in one place. Create, explore,
+            and relive the moments that define us.
           </p>
         </div>
 
         {/* Controls */}
-        <div className="max-w-7xl w-full mx-auto mt-6 flex items-center justify-between gap-4">
+        <div className="max-w-7xl w-full mx-auto 0 mt-6 justify-center flex items-center  gap-4">
           <TokenGate memoTokens={memoTokens} />
           <button
             onClick={openForm}
@@ -84,13 +84,13 @@ export default function GalleryPage(): React.ReactElement {
             title={canCreate ? "Create a new memory" : "No Memo Tokens left"}
           >
             <Plus size={20} />
-            New Memory
+            Create new Memory
           </button>
         </div>
       </div>
 
       {/* Content area */}
-      <div className="flex-1 overflow-hidden">
+      <div className="flex-1 overflow-scroll overflow-x-hidden">
         <div className="h-full max-w-7xl w-full mx-auto px-4 sm:px-5">
           <div className="h-full flex flex-col">
             {/* Info card */}

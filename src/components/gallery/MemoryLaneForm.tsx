@@ -73,9 +73,9 @@ export default function MemoryLaneForm({
       onClick={(e: React.MouseEvent<HTMLDivElement>) => {
         if (e.target === backdropRef.current) onClose();
       }}
-      className="fixed inset-0 z-50 bg-black/60 flex items-center justify-center px-4"
+      className="fixed inset-0 z-101 max-h-[500vh] bg-black/60 flex items-center overflow-scroll overflow-x-hidden justify-center px-4"
     >
-      <div className="w-full max-w-2xl bg-[#0f2444] border border-[#1a2f55] rounded-2xl shadow-2xl overflow-hidden animate-fade-in-up">
+      <div className="w-full max-h-[200vh] max-w-2xl bg-[#0f2444] border border-[#1a2f55] rounded-2xl shadow-2xl overflow-scroll overflow-x-hidden animate-fade-in-up">
         {/* Header */}
         <div className="px-6 py-4 flex items-center justify-between bg-[#102a4e] border-b border-[#1a2f55]">
           <div>
