@@ -1,20 +1,22 @@
 from flask import Flask
-from firebase_admin import credentials
-from .extensions import init_extensions
+from firebase_admin import firestore, credentials, initialize_app
+
+db = None
 
 def create_app():
     app = Flask(__name__)
 
-    '''Initialize all the necessary extensions'''
-    cred = credentials.Certificate("firebase-secret-key.json")
-    init_extensions(cred)
+    '''Initialzing Firebase app'''
+    cred = credentials.Certificate('firebase-key.json')
+    initialize_app(cred)
+    db = firestore.client()
 
-    '''Register Blueprints'''
-# for managing events 
-    from app.routes.manage_events import events_bp 
-    app.register_blueprint(events_bp, url_prefix='/api/events')
+    '''Attaching DB Config'''
+    app.config['db'] = db
 
 
+    '''Registering Blueprints'''
+    from app.routes.manage_events import events_bp
+    app.register_blueprint(events_bp)
+    
     return app
-    
-    
