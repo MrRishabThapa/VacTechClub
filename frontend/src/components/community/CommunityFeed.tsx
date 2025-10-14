@@ -66,9 +66,12 @@ export default function CommunityFeed() {
       <div className="max-w-7xl w-full mx-auto mt-10 grid grid-cols-1 lg:grid-cols-4 gap-10">
         <div>
           <aside className="lg:col-span-1 flex flex-col gap-6">
-            <button className="w-full h-[15%] md:h-[50%]  flex flex-row  md:flex-col justify-center items-center gap-4 text-2xl font-md  bg-[#1a2f55] hover:bg-[#254272] px-6 py-4 rounded-xl font-semibold transition transform hover:scale-105">
-              <Image className="text-[#9cc9ff] " size={30} /> Gallery
-            </button>
+            <Link to="/GalleryPage">
+              {" "}
+              <button className="w-full h-[15%] md:h-[50%]  flex flex-row  md:flex-col justify-center items-center gap-4 text-2xl font-md  bg-[#1a2f55] hover:bg-[#254272] px-6 py-4 rounded-xl font-semibold transition transform hover:scale-105">
+                <Image className="text-[#9cc9ff] " size={30} /> Gallery
+              </button>
+            </Link>
             <Link to="/PollsPage">
               <button className="w-full h-[15%] md:h-[50%] flex flex-row md:flex-col justify-center items-center gap-4 text-2xl font-md  bg-[#1a2f55] hover:bg-[#254272] px-6 py-4 rounded-xl font-semibold transition transform hover:scale-105">
                 <BarChart3 className="text-[#9cc9ff] " size={30} /> Polls
