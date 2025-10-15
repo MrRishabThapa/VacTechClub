@@ -6,7 +6,11 @@ import CommunityPage from "./pages/CommunityPage";
 import PollsPage from "./components/community/Polls";
 import PreLoginLanding from "./pages/Landing";
 import WallOfLegends from "./components/community/WallOfLegends";
+<<<<<<< HEAD
 // import GalleryPage from "./components/gallery/GalleryPage";
+=======
+import GalleryPage from "./components/gallery/GalleryPage";
+>>>>>>> ce4de04e419419f0a94a7ff2a564e3d4d5ba65e9
 
 function App() {
   return (
@@ -28,7 +32,11 @@ function App() {
                 <Route path="projects" element={<ProjectsPage />} />
                 <Route path="dashboard" element={<Dashboard />} /> */}
                 <Route path="WallOfLegends" element={<WallOfLegends />} />
+<<<<<<< HEAD
                 {/* <Route path="GalleryPage" element={<GalleryPage />} /> */}
+=======
+                <Route path="GalleryPage" element={<GalleryPage />} />
+>>>>>>> ce4de04e419419f0a94a7ff2a564e3d4d5ba65e9
               </Routes>
             </>
           }
